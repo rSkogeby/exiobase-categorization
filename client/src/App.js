@@ -45,11 +45,11 @@ function App() {
   }
 
   const updateAllFieldsWithRandomWordsBecauseOfTimeRestrictions = (e) => {
-    setCompanyName(randomWords(2).join(' '))
+    setCompanyName(randomWords(2).join(' ').toUpperCase())
     setDescription(randomWords(8).join(' '))
-    setOptionOne(randomWords(4).join(' '))
-    setOptionTwo(randomWords(5).join(' '))
-    setOptionThree(randomWords(3).join(' '))
+    setOptionOne([parseInt(Math.random(4)*1000), randomWords(4).join(' ')].join(': '))
+    setOptionTwo([parseInt(Math.random(4)*1000), randomWords(5).join(' ')].join(': '))
+    setOptionThree([parseInt(Math.random(4)*1000), randomWords(3).join(' ')].join(': '))
   }
 
   return (
